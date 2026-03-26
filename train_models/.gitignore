@@ -1,0 +1,45 @@
+# ── Entornos virtuales ──────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+modelos-ia/          # tu entorno uv
+.uv/
+
+# ── Python ──────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+dist/
+build/
+*.whl
+
+# ── Jupyter Notebooks ───────────────────────────────
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# ── Modelos y datos pesados ─────────────────────────
+*.pkl
+*.joblib
+*.h5
+*.model
+*.csv        # quita esta línea si SÍ quieres versionar tus datasets
+
+# ── IDEs y editores ─────────────────────────────────
+.vscode/
+.idea/
+*.code-workspace
+
+# ── Windows ─────────────────────────────────────────
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# ── Misceláneos ─────────────────────────────────────
+.DS_Store
+*.log
+.env
+.env.*
