@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EnergyAI — Detección de Anomalías</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="cloud cloud-1"></div>
+  <div class="cloud cloud-2"></div>
+  <div class="cloud cloud-3"></div>
+
+  <!-- Back nav -->
+  <a class="nav-back" href="1_homepage.html"><span>←</span> Volver</a>
+
+  <!-- Sun icon top right -->
+  <div class="sun-icon">☀️</div>
+
+  <!-- Ground -->
+  <svg class="ground" viewBox="0 0 1440 180" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,130 Q360,80 720,110 Q1080,140 1440,90 L1440,180 L0,180 Z" fill="#5cb85c"/>
+    <path d="M0,148 Q360,120 720,138 Q1080,156 1440,128 L1440,180 L0,180 Z" fill="#4caf50"/>
+    <path d="M0,160 Q400,145 800,158 Q1100,168 1440,152 L1440,180 L0,180 Z" fill="#388e3c"/>
+    <!-- Turbine left -->
+    <rect x="80" y="82" width="5" height="65" fill="#bbb"/>
+    <g transform="translate(82,84)"><rect x="-2" y="-28" width="4" height="28" rx="2" fill="#ddd"/><rect x="-2" y="-28" width="4" height="28" rx="2" fill="#ddd" transform="rotate(120)"/><rect x="-2" y="-28" width="4" height="28" rx="2" fill="#ddd" transform="rotate(240)"/><circle cx="0" cy="0" r="3.5" fill="#aaa"/></g>
+    <!-- Trees left -->
+    <rect x="30" y="108" width="9" height="40" fill="#2d5a1b"/><ellipse cx="34" cy="102" rx="20" ry="28" fill="#3d7a2b"/>
+    <rect x="140" y="115" width="8" height="34" fill="#2d5a1b"/><ellipse cx="144" cy="110" rx="17" ry="23" fill="#4a8c35"/>
+    <!-- Eco hand+bulb illustration right (simplified SVG) -->
+    <g transform="translate(1050,40)">
+      <!-- Globe -->
+      <circle cx="80" cy="60" r="55" fill="#a8e6cf" opacity="0.6"/>
+      <ellipse cx="80" cy="60" rx="55" ry="30" fill="none" stroke="#5cb85c" stroke-width="2" opacity="0.5"/>
+      <!-- Bulb -->
+      <ellipse cx="80" cy="45" rx="22" ry="26" fill="#ffe082"/>
+      <rect x="72" y="68" width="16" height="8" rx="2" fill="#bbb"/>
+      <rect x="74" y="76" width="12" height="5" rx="2" fill="#aaa"/>
+      <!-- Leaf inside bulb -->
+      <path d="M80,55 Q90,42 80,35 Q70,42 80,55Z" fill="#4caf50"/>
+    </g>
+    <!-- Solar panels right bottom -->
+    <g transform="translate(1270,128) rotate(-8)"><rect x="0" y="0" width="50" height="30" rx="2" fill="#1565c0"/><line x1="0" y1="10" x2="50" y2="10" stroke="#90caf9" stroke-width="1"/><line x1="0" y1="20" x2="50" y2="20" stroke="#90caf9" stroke-width="1"/><line x1="16" y1="0" x2="16" y2="30" stroke="#90caf9" stroke-width="1"/><line x1="33" y1="0" x2="33" y2="30" stroke="#90caf9" stroke-width="1"/></g>
+    <!-- Trees right -->
+    <rect x="1360" y="110" width="9" height="38" fill="#2d5a1b"/><ellipse cx="1364" cy="105" rx="20" ry="27" fill="#3d7a2b"/>
+  </svg>
+
+  <!-- Content -->
+  <div class="page" style="padding-bottom:13rem; gap:1rem;">
+    <h1 class="page-title">DETECCIÓN DE ANOMALÍAS<br>EN CONSUMO</h1>
+
+    <div class="field-block">
+      <label class="field-label">Desviación de uso (%)</label>
+      <input type="number" id="desviacion" placeholder="Ingresa el valor..." min="0" step="0.1"/>
+      <span class="field-hint">Porcentaje de desviación respecto al consumo esperado</span>
+    </div>
+
+    <div class="field-block">
+      <label class="field-label">Energía actual (kWh)</label>
+      <input type="number" id="energia" placeholder="Ingresa el valor..." min="0" step="0.01"/>
+      <span class="field-hint">Valor de energía consumida en la última hora</span>
+    </div>
+  </div>
+
+  <!-- Send button bottom right -->
+  <a class="btn-send" href="3_resultados_anomalias.html">
+    <span class="btn-send-text">Enviar al<br>modelo</span>
+    <span class="btn-send-arrow">➡️</span>
+  </a>
+</body>
+</html>

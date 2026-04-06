@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EnergyAI — Resultados SmartLighting</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="cloud cloud-1"></div>
+  <div class="cloud cloud-2"></div>
+  <div class="cloud cloud-3"></div>
+
+  <!-- Back nav -->
+  <a class="nav-back" href="4_form_smart.html"><span>←</span> Volver al Formulario</a>
+
+  <!-- Ground with city skyline (same as anomalias results) -->
+  <svg class="ground" viewBox="0 0 1440 180" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,128 Q360,88 720,112 Q1080,138 1440,92 L1440,180 L0,180 Z" fill="#5cb85c"/>
+    <path d="M0,148 Q360,122 720,140 Q1080,156 1440,128 L1440,180 L0,180 Z" fill="#4caf50"/>
+    <path d="M0,161 Q400,147 800,159 Q1100,169 1440,153 L1440,180 L0,180 Z" fill="#388e3c"/>
+    <!-- Buildings center -->
+    <rect x="578" y="78"  width="32" height="82" fill="#e8b84b"/>
+    <rect x="583" y="70"  width="22" height="12" fill="#d4a43a"/>
+    <rect x="616" y="63"  width="42" height="97" fill="#5b9bd5"/>
+    <rect x="620" y="56"  width="34" height="10" fill="#4a8ac4"/>
+    <rect x="665" y="83"  width="27" height="77" fill="#e8b84b"/>
+    <rect x="668" y="76"  width="21" height="10" fill="#d4a43a"/>
+    <rect x="700" y="73"  width="37" height="87" fill="#7ec8a0"/>
+    <rect x="703" y="66"  width="31" height="10" fill="#6ab890"/>
+    <!-- Windows -->
+    <rect x="620" y="68" width="6" height="6" rx="1" fill="#ffe082"/><rect x="632" y="68" width="6" height="6" rx="1" fill="#ffe082"/>
+    <rect x="620" y="80" width="6" height="6" rx="1" fill="#ffe082"/><rect x="632" y="80" width="6" height="6" rx="1" fill="#ffe082"/>
+    <!-- Turbine left -->
+    <rect x="180" y="76" width="5" height="68" fill="#bbb"/>
+    <g transform="translate(182,78)"><rect x="-2" y="-27" width="4" height="27" rx="2" fill="#ddd"/><rect x="-2" y="-27" width="4" height="27" rx="2" fill="#ddd" transform="rotate(120)"/><rect x="-2" y="-27" width="4" height="27" rx="2" fill="#ddd" transform="rotate(240)"/><circle cx="0" cy="0" r="3.5" fill="#aaa"/></g>
+    <!-- Trees left -->
+    <rect x="38" y="108" width="9" height="40" fill="#2d5a1b"/><ellipse cx="42" cy="102" rx="21" ry="29" fill="#3d7a2b"/>
+    <rect x="98" y="115" width="8" height="34" fill="#2d5a1b"/><ellipse cx="102" cy="110" rx="17" ry="23" fill="#4a8c35"/>
+    <!-- Turbine right -->
+    <rect x="1268" y="70" width="5" height="72" fill="#bbb"/>
+    <g transform="translate(1270,72)"><rect x="-2" y="-26" width="4" height="26" rx="2" fill="#ddd"/><rect x="-2" y="-26" width="4" height="26" rx="2" fill="#ddd" transform="rotate(120)"/><rect x="-2" y="-26" width="4" height="26" rx="2" fill="#ddd" transform="rotate(240)"/><circle cx="0" cy="0" r="3" fill="#aaa"/></g>
+    <!-- Solar panels right -->
+    <g transform="translate(1345,130) rotate(-8)"><rect x="0" y="0" width="50" height="30" rx="2" fill="#1565c0"/><line x1="0" y1="10" x2="50" y2="10" stroke="#90caf9" stroke-width="1"/><line x1="0" y1="20" x2="50" y2="20" stroke="#90caf9" stroke-width="1"/><line x1="16" y1="0" x2="16" y2="30" stroke="#90caf9" stroke-width="1"/><line x1="33" y1="0" x2="33" y2="30" stroke="#90caf9" stroke-width="1"/></g>
+    <!-- Trees right -->
+    <rect x="1392" y="110" width="9" height="38" fill="#2d5a1b"/><ellipse cx="1396" cy="105" rx="20" ry="27" fill="#3d7a2b"/>
+  </svg>
+
+  <!-- Content -->
+  <div class="page" style="padding-bottom:13rem; gap:1rem;">
+    <h1 class="page-title">ESTOS SON TUS RESULTADOS DESDE EL MODELO DE SMARTLIGHTING</h1>
+
+    <!-- Consumo estimado pill -->
+    <div style="width:100%; max-width:480px; display:flex; flex-direction:column; align-items:center; gap:4px;">
+      <label class="field-label" style="align-self:flex-start;">Consumo estimado</label>
+      <div class="result-pill" style="min-height:52px;"></div>
+      <span class="pill-hint">kWh predichos por el modelo RANSAC</span>
+    </div>
+
+    <!-- Center oval bubble with params -->
+    <div class="result-bubble">
+      <span class="bubble-label">Parámetros enviados</span>
+      <div style="display:flex; gap:1.5rem; margin-top:0.4rem;">
+        <div style="text-align:center;">
+          <div style="font-size:0.8rem; opacity:0.85;">Intensidad</div>
+          <div style="font-size:1rem; font-weight:800;">—</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-size:0.8rem; opacity:0.85;">Personas</div>
+          <div style="font-size:1rem; font-weight:800;">—</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Homepage button bottom right -->
+  <a class="nav-home" href="1_homepage.html">
+    <span style="font-weight:800; font-size:1.1rem;">Homepage</span> ➡️
+  </a>
+</body>
+</html>
